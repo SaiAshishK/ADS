@@ -32,7 +32,7 @@ public void testCase1() {
   symbolTable.put("P",10);
   symbolTable.put("L",11);
   symbolTable.put("E",12);
-  List<String> arr = new ArrayList<String>(List.of("L","P","M","X","H","C","R","A","E","S"));
+  List<String> arr = new ArrayList<String>(Arrays.asList("L","P","M","X","H","C","R","A","E","S"));
   String res = "";
   for(String s: arr){
   	res += s + " ";
@@ -42,7 +42,7 @@ public void testCase1() {
 
 
 
-  arr = new ArrayList<String>(List.of("L","P","M","H","C","R","A","E","S","X"));
+  arr = new ArrayList<String>(Arrays.asList("L","P","M","H","C","R","A","E","S","X"));
   res = "";
   for(String s: arr){
     res += s + " ";
@@ -50,7 +50,7 @@ public void testCase1() {
   Assert.assertEquals(res, symbolTable.keys().toString());
 
   Assert.assertEquals(new Integer(12), symbolTable.get("E"));
-  arr = new ArrayList<String>(List.of("L","P","M","H","C","R","A","S","X","E"));
+  arr = new ArrayList<String>(Arrays.asList("L","P","M","H","C","R","A","S","X","E"));
   res = "";
   for(String s: arr){
     res += s + " ";
@@ -58,7 +58,7 @@ public void testCase1() {
   Assert.assertEquals(res, symbolTable.keys().toString());
 
   Assert.assertEquals(new Integer(4), symbolTable.get("C"));
-  arr = new ArrayList<String>(List.of("L","P","M","H","R","A","S","X","E","C"));
+  arr = new ArrayList<String>(Arrays.asList("L","P","M","H","R","A","S","X","E","C"));
   res = "";
   for(String s: arr){
     res += s + " ";
@@ -66,7 +66,7 @@ public void testCase1() {
   Assert.assertEquals(res, symbolTable.keys().toString());
 
   Assert.assertEquals(new Integer(10), symbolTable.get("P"));
-  arr = new ArrayList<String>(List.of("L","M","H","R","A","S","X","E","C","P"));
+  arr = new ArrayList<String>(Arrays.asList("L","M","H","R","A","S","X","E","C","P"));
   res = "";
   for(String s: arr){
     res += s + " ";
