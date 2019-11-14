@@ -1,7 +1,11 @@
 import java.util.*;
 public class Main{
 
-
+/**
+ * Given a array of double values
+ * Find the fathest pair
+ * @author: K. Sai Ashish 
+ */
 public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
     int arraySize = sc.nextInt();
