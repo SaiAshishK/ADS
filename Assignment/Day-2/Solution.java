@@ -3,6 +3,7 @@ public class Solution
 {  
 /**
  * @author - K. Sai Ashish
+ * 
   */ 
     Node last;
     int size;
@@ -42,7 +43,7 @@ public class Solution
     }
     /**
      *  Time Complexity - O(1)
-     * deltes the first inserted node
+     * deletes the first inserted node
      */
     public int Dequeue() {
         if (isEmpty()) {
@@ -78,3 +79,13 @@ public class Solution
         
         }
     }
+    /**
+     * In Queues implementation using Linked List , the 
+     * time complexity of enqueue and dequeue is same as
+     * circular linked liste i.e., O(1) as in linked list 
+     * we use two pointers front and rear
+     */
+    /**
+     * Queues implementation using arrays, the time complexity
+     * for enqueue is O(1) and dequeue is O(N)
+     */ 
