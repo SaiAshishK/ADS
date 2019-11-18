@@ -1,3 +1,6 @@
+/**
+ * @@author - K. Sai Ashish
+ */
 public class Cards implements Comparable<Cards> {
     int suit;
     int value;
