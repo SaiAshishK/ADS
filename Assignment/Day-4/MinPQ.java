@@ -275,14 +275,14 @@ public class MinPQ<Key> implements Iterable<Key> {
         Scanner sc = new Scanner(System.in);
         int p = sc.nextInt();
         MinPQ<Integer> obj = new MinPQ<Integer>(p);
-        // Time complexity - O(N)
+        // Time complexity - O(NlogN)
         for(int i = 0; i < p; i++){
             int q = sc.nextInt();
             obj.insert(q);
         }
         int z = sc.nextInt();
         int[] b = new int[z];
-        // Time Complexity - O(K)
+        // Time Complexity - O(KlogK)
         for(int key = 0; key <z;key++){
             b[key] = obj.delMin();
         }
