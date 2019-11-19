@@ -406,6 +406,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
     public static void main(String[] args) { 
         BinarySearchST<String, Integer> st = new BinarySearchST<String, Integer>(10);
         Scanner sc = new Scanner(System.in); 
+        System.out.println("Enter Array Size");
         int p = sc.nextInt();
         String[] key = new String[p];
         for (int i = 0; i < p; i++) {
@@ -414,6 +415,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
            key[i] = str;
            
            if(st.size() == 0){
+               // Time Complexity - O(N).
                st.put(str,q);
            }
            int cmp = st.max().compareTo(str);
@@ -421,6 +423,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
                 st.put(str,q);
             }
             else if (cmp < 0){
+                // Time complexity - O(1).
                 st.AddMax(str,q);
             }
            
