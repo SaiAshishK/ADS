@@ -1,4 +1,10 @@
+import java.util.*;
+
 public class Deque<Item> implements Iterable<Item> {
+    Node first;
+    Node last;
+    int size;
+
     class Node{
         int size;
         Node prev;
@@ -83,12 +89,29 @@ public class Deque<Item> implements Iterable<Item> {
 
     // return an iterator over items in order from front to back
     public Iterator<Item> iterator(){
-
+        return new DequeIterator(first);
     }
 
-    // unit testing (required)
-    public static void main(String[] args){
+    private class DequeIterator implements Iterator<Item> {
+        private Node current;
 
+    public DequeIterator(Node first){
+        current = first;
     }
+    public boolean hasNext() {
+        return current != null;
+    }
+    public void remove() {
+        throw new UnsupportedOperationException();
+    }
+    public Item next() {
+        if (!hasNext()) {
+            throw new NoSuchElementException();
+        }
+        Item item = current.item;
+        current = current.right;
+        return item;
+    }
+}
 
 }
