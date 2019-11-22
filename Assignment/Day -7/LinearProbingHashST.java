@@ -1,4 +1,4 @@
-import java.util.Random;
+import java.util.*;
 /******************************************************************************
  *  Compilation:  javac LinearProbingHashST.java
  *  Execution:    java LinearProbingHashST < input.txt
@@ -207,13 +207,13 @@ public class LinearProbingHashST<Key, Value> {
         assert check();
     }
 
-    // /**
-    //  * Returns all keys in this symbol table as an {@code Iterable}.
-    //  * To iterate over all of the keys in the symbol table named {@code st},
-    //  * use the foreach notation: {@code for (Key key : st.keys())}.
-    //  *
-    //  * @return all keys in this symbol table
-    //  */
+    /**
+     * Returns all keys in this symbol table as an {@code Iterable}.
+     * To iterate over all of the keys in the symbol table named {@code st},
+     * use the foreach notation: {@code for (Key key : st.keys())}.
+     *
+     * @return all keys in this symbol table
+     */
     // public Iterable<Key> keys() {
     //     Queue<Key> queue = new Queue<Key>();
     //     for (int i = 0; i < m; i++)
@@ -244,6 +244,7 @@ public class LinearProbingHashST<Key, Value> {
 
 
     /**
+     * Unit tests the {@code LinearProbingHashST} data type.
      *
      * @param args the command-line arguments
      */
@@ -256,12 +257,12 @@ public class LinearProbingHashST<Key, Value> {
             st.put(rand,i);
         }
         int count = 0;
-        for(int j =100; j<m; j= j + 100 ){
+        for(int j =100; j < m; j= j + 100 ){
             if(st.get(j) != null){
                 count++;
             }
         }
 
-        System.out.println("Probability - "+(float)count/m);
+        System.out.println("Probability - "+(float)count/10000);
     }
 }
